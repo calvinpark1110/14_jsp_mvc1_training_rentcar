@@ -2,14 +2,14 @@ package rentcar.model;
 
 public class MemberBean {
 	
-	private String id;			//회원 ID
-	private String pw;			//회원 PW
-	private String email;		//이메일
-	private String tel;			//연락처
-	private String hobby;		//취미
-	private String job;			//직업
-	private String age;			//연령
-	private String info;		//기타
+	private String id;			
+	private String pw;			
+	private String email;		
+	private String tel;		
+	private String hobby;		
+	private String job;			
+	private String age;			
+	private String info;		
 	
 	public String getId() {
 		return id;

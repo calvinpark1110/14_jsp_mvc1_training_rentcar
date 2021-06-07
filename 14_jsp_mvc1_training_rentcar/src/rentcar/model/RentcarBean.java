@@ -2,14 +2,14 @@ package rentcar.model;
 
 public class RentcarBean {
 	
-	private int no;				//차량 번호
-	private String name;		//차량명
-	private int category;		//차량 분류
-	private int price;			//렌트 금액
-	private int usePeople;		//예약
-	private String company;		//제조사
-	private String img;			//차량 사진
-	private String info;		//차량 정보
+	private int no;				
+	private String name;		
+	private int category;		
+	private int price;			
+	private int usePeople;		
+	private String company;		
+	private String img;			
+	private String info;		
 	
 	public int getNo() {
 		return no;

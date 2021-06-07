@@ -2,16 +2,16 @@ package rentcar.model;
 
 public class CarReserveBean {
 	
-	private int reserveSeq;		//예약 순서
-	private int no;				//예약 번호
-	private String id;			//예약자
-	private int qty;			//예약 수량
-	private int dday;			//예약기간
-	private String rday;		//예약 시작일
-	private int useIn;			//옵션1 : 보험
-	private int useWifi;		//옵션2 : 와이파이
-	private int useNavi;		//옵션3 : 내비게이션
-	private int useSeat;		//옵션4 : 베이비시트
+	private int reserveSeq;		
+	private int no;				
+	private String id;		
+	private int qty;		
+	private int dday;			
+	private String rday;	
+	private int useIn;		
+	private int useWifi;	
+	private int useNavi;		
+	private int useSeat;		
 	
 	public int getReserveSeq() {
 		return reserveSeq;

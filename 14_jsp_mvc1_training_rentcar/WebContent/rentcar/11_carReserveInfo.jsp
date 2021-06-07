@@ -12,7 +12,7 @@
 		request.setCharacterEncoding("utf-8");
 		int no = Integer.parseInt(request.getParameter("no"));
 		
-		//DB에 연결하여, 한대의 차량 정보를 호출
+	
 		RentcarBean bean = RentcarDao.getInstance().getOneCar(no);
 		
 		int category = bean.getCategory();

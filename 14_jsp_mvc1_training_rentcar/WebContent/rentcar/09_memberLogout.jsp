@@ -7,7 +7,7 @@
 </head>
 <body>
 	<%
-		//세션 초기화
+	
 		session.invalidate();
 		response.sendRedirect("01_carMain.jsp");
 	%>

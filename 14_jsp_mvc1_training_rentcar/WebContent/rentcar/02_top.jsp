@@ -8,10 +8,10 @@
 <body>
 
 	<%
-		//세션을 이용한 로그인 처리
+		
 		String id = (String)session.getAttribute("id");
 		
-		//로그인 되어있지 않다면,
+	
 		if(id == null) {
 			id = "GUEST";
 		}
@@ -33,7 +33,7 @@
 				%>
 						<button onclick="location.href='01_carMain.jsp?center=07_memberLogin.jsp'">로그인</button>
 				<%
-					//관리자라면 관리자메뉴 버튼 추가
+			
 					} else if(id.equals("admin")) {
 				%>
 						<button onclick="location.href='01_carMain.jsp?center=16_admin.jsp'">관리자메뉴</button>

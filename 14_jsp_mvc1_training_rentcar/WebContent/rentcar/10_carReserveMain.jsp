@@ -11,7 +11,7 @@
 <body>
 
 <%
-	// 로그인 되어있는 아이디를 읽어옴
+
  		String id = (String) session.getAttribute("id");
  		
  		if (id == null) {

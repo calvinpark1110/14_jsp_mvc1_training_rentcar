@@ -2,17 +2,17 @@ package rentcar.model;
 
 public class CarViewBean {
 	
-	private String name;	//차량명
-	private int price;		//렌트 금액
-	private String img;		//차량 사진
-	private String id;		//예약자 id
-	private int qty;		//예약가능 수량
-	private int dday;		//예약 기간
-	private String rday;	//예약 시작일
-	private int useIn;		//옵션1 : 보험
-	private int useWifi;	//옵션2 : 와이파이
-	private int useNavi;	//옵션3 : 내비게이션
-	private int useSeat;	//옵션4 : 베이비시트
+	private String name;	
+	private int price;		
+	private String img;		
+	private String id;	
+	private int qty;		
+	private int dday;		
+	private String rday;	
+	private int useIn;		
+	private int useWifi;	
+	private int useNavi;	
+	private int useSeat;	
 
 	public String getName() {
 		return name;

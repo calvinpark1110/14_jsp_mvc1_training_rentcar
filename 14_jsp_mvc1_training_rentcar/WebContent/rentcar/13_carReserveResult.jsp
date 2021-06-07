@@ -27,21 +27,19 @@
 	<%
 		}
 		
-		//날짜 비교
+
 		Date d1 = new Date();
 		Date d2 = new Date();
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		d1 = sdf.parse(rbean.getRday());
-		d2 = sdf.parse(sdf.format(d2));		//format() = SimpleDateFormat >> yyyy-MM-dd
+		d2 = sdf.parse(sdf.format(d2));		
 	
-		//날짜 비교 메소드
-		int compare = d1.compareTo(d2);
-		//예약일이 현재 날짜보다 이전 : -1
-		//예약일이 현재 날짜와 동일 : 0
-		//예약일이 현재 날짜보다 이후 : 1을 리턴
 		
-		if(compare < 0) {		//현재 날짜보다 이전 날짜 선택 시,
+		int compare = d1.compareTo(d2);
+		
+		
+		if(compare < 0) {		
 	%>
 		<script type="text/javascript">
 			alert("현재 시스템 날짜보다 이전 날짜는 선택할 수 없습니다.");
@@ -50,23 +48,17 @@
 	<%
 		}
 	
-		//예약 완료 시, 데이터 저장 후 결과
 		
-		//rbean class에 id값 저장
 		String id1 = (String)session.getAttribute("id");
 		rbean.setId(id1);
 		
-		//DB에 bean클래스 저장
 		RentcarDao rdao = RentcarDao.getInstance();
 		rdao.setReserveCar(rbean);
 		
-		//차량 정보 호출
 		RentcarBean cbean = rdao.getOneCar(rbean.getNo());
 		
-		//차량 총 금액
 		int totCar = cbean.getPrice() * rbean.getQty() * rbean.getDday();
 		
-		//옵션 금액(선택 시, +10000원)
 		int usein = 0;
 		if(rbean.getUseIn() == 1) { usein = 10000; }
 		

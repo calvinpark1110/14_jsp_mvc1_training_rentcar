@@ -43,7 +43,7 @@ public class RentcarDao {
 	
 	
 	
-	// 회원가입 DAO
+
 	public boolean joinMember(MemberBean bean) {
 
 		boolean isJoinMember = false;
@@ -88,7 +88,6 @@ public class RentcarDao {
 	
 	
 	
-	// 로그인 DAO
 	public boolean login(String id, String pw) {
 		
 		boolean isLogin = false;
@@ -123,7 +122,6 @@ public class RentcarDao {
 	
 	
 	
-	//선택한 1대의 차량 정보를 조회하는 DAO
 	public RentcarBean getOneCar(int no) {
 		
 		RentcarBean bean = new RentcarBean();
@@ -163,7 +161,6 @@ public class RentcarDao {
 		
 	}
 	
-	//예약 차량 정보 저장
 	public void setReserveCar(CarReserveBean bean) {
 		
 		conn = getConnection();
@@ -171,11 +168,9 @@ public class RentcarDao {
 		int num = 0;
 		try {
 			
-			//DB에 저장된 예약된 차량의 마지막 순서
 			pstmt = conn.prepareStatement("SELECT MAX(RESERVE_SEQ) FROM CARRESERVE");
 			rs = pstmt.executeQuery();
 			
-			//num은 마지막 순서 + 1
 			if (rs.next()) {
 				num = rs.getInt(1) + 1;
 			}
@@ -212,7 +207,6 @@ public class RentcarDao {
 	
 	
 	
-	//모든 차량 정보를 조회하는 DAO
 	public ArrayList<RentcarBean> getAllCar() {
 		
 		ArrayList<RentcarBean> rentcarList = new ArrayList<>();
@@ -258,7 +252,6 @@ public class RentcarDao {
 	
 	
 	
-	// 전체 예약 현황(관리자)
 	public ArrayList<CarViewBean> getAllReserve() {
 		
 		ArrayList<CarViewBean> reserveList = new ArrayList<>();
@@ -307,7 +300,6 @@ public class RentcarDao {
 		
 	
 	
-	// 전체 예약 현황을 조회하는 DAO(회원)
 	public ArrayList<CarViewBean> getAllReserve(String id) {
 		
 		ArrayList<CarViewBean> carviewList = new ArrayList<>();
@@ -358,7 +350,6 @@ public class RentcarDao {
 	
 	
 	
-	// 예약내역을 삭제하는 DAO
 	public void carRemoveReserve(String id, String rday) {
 		
 		conn = getConnection();
